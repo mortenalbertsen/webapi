@@ -135,8 +135,6 @@
   <ItemGroup>
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
-    <Compile Include="BaseRepository\BaseDBContext.cs" />
-    <Compile Include="BaseRepository\BaseRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BookRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
@@ -147,10 +145,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{4B803268-76F5-47CD-99C7-AE2C1A2FC398}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0792B3AB-0969-4F1C-B14A-B110980B0079}</Project>
       <Name>Models</Name>

@@ -1,16 +1,13 @@
-﻿using Interfaces.Repositories;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Data.Entity.Validation;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Unity;
 using Unity.Resolution;
 
-namespace Repository.BaseRepository {
+namespace BookApp.Repository {
     [Serializable]
     public abstract class BaseRepository<TDomainClass> : IBaseRepository<TDomainClass, long>
        where TDomainClass : class {

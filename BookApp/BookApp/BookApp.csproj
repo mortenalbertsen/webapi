@@ -309,23 +309,37 @@
     <Compile Include="Helper\IAPIException.cs" />
     <Compile Include="Helper\ServiceStatus.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\DomainModels\Book.cs" />
+    <Compile Include="Models\DomainModels\User.cs" />
+    <Compile Include="Models\ExtendedModels\BookExtended.cs" />
+    <Compile Include="ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Repository\BaseDBContext.cs" />
+    <Compile Include="Repository\BaseRepository.cs" />
+    <Compile Include="Repository\BookRepository.cs" />
+    <Compile Include="Repository\IBaseRepository.cs" />
+    <Compile Include="Repository\IBookRepository.cs" />
+    <Compile Include="Repository\IUserRepository.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\BookService.cs" />
+    <Compile Include="Services\IBookService.cs" />
+    <Compile Include="Services\IUserService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Unity\UnityDependencyResolver.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Assets\Content\bootstrap.css" />
+    <Content Include="Assets\Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Assets\Scripts\bootstrap.js" />
+    <Content Include="Assets\Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -348,17 +362,17 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\respond.js" />
-    <Content Include="Scripts\respond.min.js" />
+    <None Include="Assets\Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Assets\Scripts\jquery-1.10.2.js" />
+    <Content Include="Assets\Scripts\jquery-1.10.2.min.js" />
+    <None Include="Assets\Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Assets\Scripts\jquery.validate.js" />
+    <Content Include="Assets\Scripts\jquery.validate.min.js" />
+    <Content Include="Assets\Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Assets\Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Assets\Scripts\modernizr-2.6.2.js" />
+    <Content Include="Assets\Scripts\respond.js" />
+    <Content Include="Assets\Scripts\respond.min.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -367,42 +381,22 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\_references.js" />
+    <Content Include="Assets\Content\Site.css" />
+    <Content Include="Assets\Scripts\_references.js" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Implementation\Implementation.csproj">
-      <Project>{5b6455eb-7dfc-4b7c-adca-1e354fa16946}</Project>
-      <Name>Implementation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{4B803268-76F5-47CD-99C7-AE2C1A2FC398}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Models\Models.csproj">
-      <Project>{0792b3ab-0969-4f1c-b14a-b110980b0079}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{52ef1e27-c45a-4d58-8fdc-04052c6f2a96}</Project>
-      <Name>Repository</Name>
-    </ProjectReference>
+    <Content Include="Assets\Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,14 +1,9 @@
-﻿using Models.DomainModels;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
+﻿using System.Data.Entity;
 using System.Threading;
 using System.Threading.Tasks;
+using BookApp.Models.DomainModels;
 
-namespace Repository.BaseRepository {
+namespace BookApp.Repository {
     public sealed class BaseDBContext : DbContext {
         #region Private
         private bool isDefault;

@@ -1,12 +1,9 @@
-﻿using Models.DomainModels;
-using Models.ExtendedModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BookApp.Models.DomainModels;
+using BookApp.Models.ExtendedModels;
 
-namespace Interfaces.Repositories {
+namespace BookApp.Repository {
     public interface IUserRepository : IBaseRepository<User, long> {
         User GetUserById(Guid userId);
         User GetUserByName(string name);

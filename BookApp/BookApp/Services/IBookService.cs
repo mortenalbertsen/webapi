@@ -1,12 +1,9 @@
-﻿using Models.DomainModels;
-using Models.ExtendedModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BookApp.Models.DomainModels;
+using BookApp.Models.ExtendedModels;
 
-namespace Interfaces.Services {
+namespace BookApp.Services {
     public interface IBookService {
         Book GetBookById(Guid bookId);
         IEnumerable<BookExtended> GetBooksByUserId(Guid userId);

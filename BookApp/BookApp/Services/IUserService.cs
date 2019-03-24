@@ -1,11 +1,7 @@
-﻿using Models.DomainModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using BookApp.Models.DomainModels;
 
-namespace Interfaces.Services {
+namespace BookApp.Services {
     public interface IUserService {
         User GetUserById(Guid userId);
         User GetUserByName(string name);

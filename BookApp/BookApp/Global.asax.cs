@@ -1,13 +1,13 @@
-﻿using BookApp.Unity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using BookApp.Repository;
+using BookApp.Services;
 using Unity;
+using Unity.AspNet.Mvc;
+using UnityDependencyResolver = BookApp.Unity.UnityDependencyResolver;
 
 namespace BookApp {
     public class WebApiApplication : System.Web.HttpApplication {
@@ -19,9 +19,15 @@ namespace BookApp {
             return container;
         }
 
-        private static void RegisterTypes(UnityContainer container) {
-            Implementation.TypeRegistrations.RegisterType(container);
-            Repository.TypeRegistrations.RegisterType(container);
+        private static void RegisterTypes(UnityContainer unityContainer) {
+
+            unityContainer.RegisterType<IUserService, UserService>();
+            unityContainer.RegisterType<IBookService, BookService>();
+
+            unityContainer.RegisterType<BaseDBContext>(new PerRequestLifetimeManager());
+            unityContainer.RegisterType<IUserRepository, UserRepository>();
+            unityContainer.RegisterType<IBookRepository, BookRepository>();
+            
         }
 
         private static void RegisterIoC() {

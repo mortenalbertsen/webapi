@@ -117,10 +117,6 @@
     <Compile Include="UserService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{4b803268-76f5-47cd-99c7-ae2c1a2fc398}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{0792b3ab-0969-4f1c-b14a-b110980b0079}</Project>
       <Name>Models</Name>

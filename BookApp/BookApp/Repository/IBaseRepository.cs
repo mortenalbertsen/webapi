@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
 
-namespace Interfaces.Repositories {
+namespace BookApp.Repository {
     public interface IBaseRepository<TDomainClass, TKeyType>
         where TDomainClass : class {
 
